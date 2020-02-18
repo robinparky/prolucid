@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hiberclipse>
+    <jar_driver>/home/rpark/tomcat/common/lib\/mysql-connector-java-3.0.16-ga-bin.jar</jar_driver>
+    <mapping_files>test</mapping_files>
+    <driver>org.gjt.mm.mysql.Driver</driver>
+    <url>jdbc:mysql://127.0.0.1/pmsdb</url>
+    <username>pmsuser</username>
+    <password>myd474</password>
+    <schema>pmsdb</schema>
+</hiberclipse>

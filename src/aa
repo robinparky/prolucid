@@ -1,0 +1,57 @@
+./edu/scripps/pms/util/sqt/SQTPeptideSpComparator.java:     * Return true if o is the same object as this, i.e., same memory address 
+./edu/scripps/pms/util/io/FastaReader.java:    // Becareful, might need lots of memory
+./edu/scripps/pms/util/driver/TestDriver1.java:       System.out.println("memory address of s1 to s5");
+./edu/scripps/pms/topdown/PeptideHitComparator.java:     * Return true if o is the same object as this, i.e., same memory address 
+./edu/scripps/pms/blindptm/PeptideHitComparator.java:     * Return true if o is the same object as this, i.e., same memory address 
+./edu/scripps/pms/blindptm/MemorizedDb.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/blindssptm/PeptideHitComparator.java:     * Return true if o is the same object as this, i.e., same memory address 
+./edu/scripps/pms/blindssptm/MemorizedDb.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/mspid/db/ProcessDb_Threading.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/mspid/db/ProcessDbOld.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/mspid/db/ProcessDbNew.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/mspid/db/ProcessDb.java:            // prepare for garbage collection to reduce memory usage
+./edu/scripps/pms/mspid/db/MemorizedDb.java:            long totalmemory = Runtime.getRuntime().totalMemory();
+./edu/scripps/pms/mspid/db/MemorizedDb.java:            long usedmemory  = totalmemory - Runtime.getRuntime().freeMemory();
+./edu/scripps/pms/mspid/db/MemorizedDb.java:            System.out.println("Total memory\t" + totalmemory + "\n");
+./edu/scripps/pms/mspid/db/MemorizedDb.java:            System.out.println("Memory used after loading the database\t" + usedmemory + "\n");
+./edu/scripps/pms/mspid/PeptideHitComparator.java:     * Return true if o is the same object as this, i.e., same memory address 
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:        mylogline.append("\t" + (Runtime.getRuntime().totalMemory()/1000000 + "\tFree memory\t" + Runtime.getRuntime().freeMemory()/1000000) + "\n");
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:            long totalmemory = Runtime.getRuntime().totalMemory();
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:            long usedmemory  = totalmemory - Runtime.getRuntime().freeMemory();
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:            logbuffer.append("Total memory\t" + totalmemory + "\n");
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:            logbuffer.append("Memory used after loading the database\t" + usedmemory + "\n");
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:                logbuffer.append("Total Memory after loading the search engine\t" + (Runtime.getRuntime().totalMemory() + "\tFree memory\t" + Runtime.getRuntime().freeMemory()) + "\n");
+./edu/scripps/pms/mspid/ProlucidSearchEngine.java:                logbuffer.append("Total Memory after the search\t" + (Runtime.getRuntime().totalMemory() + "\tFree memory\t" + Runtime.getRuntime().freeMemory()) + "\n");
+./edu/scripps/pms/mspid/SearchEngine.java:            long totalmemory = Runtime.getRuntime().totalMemory();
+./edu/scripps/pms/mspid/SearchEngine.java:            long usedmemory  = totalmemory - Runtime.getRuntime().freeMemory();
+./edu/scripps/pms/mspid/SearchEngine.java:            logbuffer.append("Total memory\t" + totalmemory + "\n");
+./edu/scripps/pms/mspid/SearchEngine.java:            logbuffer.append("Memory used after loading the database\t" + usedmemory + "\n");
+./edu/scripps/pms/mspid/SearchEngine.java:            logbuffer.append("Total Memory after loading the search engine\t" + (Runtime.getRuntime().totalMemory() + "\tFree memory\t" + Runtime.getRuntime().freeMemory()) + "\n");
+./edu/scripps/pms/mspid/SearchEngine.java:            logbuffer.append("Total Memory after the search\t" + (Runtime.getRuntime().totalMemory() + "\tFree memory\t" + Runtime.getRuntime().freeMemory()) + "\n");
+./blazmass/dbindex/DBIndexer.java: * without a store (cut on the fly) with temporary in-memory store
+./blazmass/dbindex/DBIndexer.java:                //if in memory index, use in-memory for search only
+./blazmass/dbindex/DBIndexer.java:                //in future we can try indexing in-memory, but it will fail for larger dbs
+./blazmass/dbindex/DBIndexer.java:            //set up in memory temporary "index" that does the filtering
+./blazmass/dbindex/DBIndexer.java:        //set up in memory temporary "index" that does the filtering
+./blazmass/dbindex/DBIndexer.java:            logger.log(Level.SEVERE, "Error getting sequences from in-memory filtering index", ex);
+./blazmass/dbindex/IndexedSequence.java:     * Case when we have all data stored upfront, e.g. in memory index
+./blazmass/dbindex/DBIndexStore.java:     * Set in memory protein database
+./blazmass/dbindex/DBIndexStore.java:     * @param proteinCache in memory protein database, map of definition accession to sequence
+./blazmass/dbindex/DBIndexStore.java:     * return true if the implementation uses in memory protein db cache
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:    //in-memory protein cache
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:     * Construct new store, with in memory option
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:     * @param inMemory true if should use in memory database
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:            //TODO handle case when we want in memory for search only, not for indexing
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java://                    logger.log(Level.INFO, "Database index: " + dbPath + " already exists, will use that in memory");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                con = DriverManager.getConnection("jdbc:sqlite::memory:", config.toProperties());
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                logger.log(Level.INFO, "Using in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                    logger.log(Level.INFO, "Loading the in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                    logger.log(Level.INFO, "Done loading the in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:            //  logger.log(Level.INFO, "Will create backup of the in-memory db when done");
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:          //  throw new IllegalArgumentException("In-memory index not supported");
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:         * Add the new sequence to in memory cached pre-commit sequence hash
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:                //to free up memory, optimize buffers, and ensure a commit
+./blazmass/dbindex/MassRangeFilteringIndex.java: * Special temporary index store that is used to store in memory sequences as
+./blazmass/dbindex/ProteinCache.java: * Singleton, so we do not waste memory in multi-threaded setup
+./blazmass/io/SearchParamReader.java:            int inMemoryIndexI =  trimValueAsInt(getParam("index_inmemory"), 1);
+./blazmass/io/FastaReader.java:    // Becareful, might need lots of memory

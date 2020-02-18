@@ -1,0 +1,13 @@
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:    //in-memory protein cache
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:     * Construct new store, with in memory option
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:     * @param inMemory true if should use in memory database
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:            //TODO handle case when we want in memory for search only, not for indexing
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java://                    logger.log(Level.INFO, "Database index: " + dbPath + " already exists, will use that in memory");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                con = DriverManager.getConnection("jdbc:sqlite::memory:", config.toProperties());
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                logger.log(Level.INFO, "Using in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                    logger.log(Level.INFO, "Loading the in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:                    logger.log(Level.INFO, "Done loading the in-memory database");
+./blazmass/dbindex/DBIndexStoreSQLiteAbstract.java:            //  logger.log(Level.INFO, "Will create backup of the in-memory db when done");
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:          //  throw new IllegalArgumentException("In-memory index not supported");
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:         * Add the new sequence to in memory cached pre-commit sequence hash
+./blazmass/dbindex/DBIndexStoreSQLiteMult.java:                //to free up memory, optimize buffers, and ensure a commit

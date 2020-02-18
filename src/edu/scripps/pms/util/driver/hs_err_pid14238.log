@@ -1,0 +1,153 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x420744b0, pid=14238, tid=1074457792
+#
+# Java VM: Java HotSpot(TM) Client VM (10.0-b19 mixed mode linux-x86)
+# Problematic frame:
+# C  [libc.so.6+0x744b0]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0805c400):  Thread [stack: 0x4005f000,0x400af000] [id=14239]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x46a79898
+
+Registers:
+EAX=0x46a79894, EBX=0x42130a14, ECX=0x400ae774, EDX=0x42131300
+ESP=0x400ae60c, EBP=0x400ae674, ESI=0x069cb120, EDI=0x400ae77c
+EIP=0x420744b0, CR2=0x46a79898, EFLAGS=0x00010246
+
+Top of Stack: (sp=0x400ae60c)
+0x400ae60c:   0642d964 0805daa8 400ae624 0639777a
+0x400ae61c:   00000001 00000001 400ae664 060b6486
+0x400ae62c:   069cb120 00000000 400ae644 400ae644
+0x400ae63c:   00000019 0805f388 e5000000 00000004
+0x400ae64c:   00000004 00000010 400ae674 00000000
+0x400ae65c:   0805c400 0805c400 4207445b 42130a14
+0x400ae66c:   42131300 400ae77c 400ae694 420734d6
+0x400ae67c:   42131300 400ae77c 400ae6a4 0643335c 
+
+Instructions: (pc=0x420744b0)
+0x420744a0:   f7 45 b8 02 00 00 00 0f 85 c3 03 00 00 8d 04 0e
+0x420744b0:   8b 50 04 89 45 f0 89 55 e8 83 e2 f8 f7 45 b8 01 
+
+Stack: [0x4005f000,0x400af000],  sp=0x400ae60c,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x744b0]
+C  [libc.so.6+0x734d6]  __libc_free+0x86
+V  [libjvm.so+0x3d37e3]
+V  [libjvm.so+0x38fe20]
+V  [libjvm.so+0x391a5d]
+V  [libjvm.so+0x394ed9]
+V  [libjvm.so+0x245313]
+C  [java+0x2fcc]
+C  [java+0x1942]  JavaMain+0x72
+C  [libpthread.so.0+0x42b6]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0805c400 (exited) Thread [stack: 0x4005f000,0x400af000] [id=14239]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+06000000-0641a000 r-xp 00000000 00:11 325327394  /data/1/java/jdk1.6.0_04/jre/lib/i386/client/libjvm.so
+0641a000-06434000 rw-p 0041a000 00:11 325327394  /data/1/java/jdk1.6.0_04/jre/lib/i386/client/libjvm.so
+06434000-06854000 rw-p 00000000 00:00 0
+08048000-08052000 r-xp 00000000 00:11 325324167  /data/1/java/jdk1.6.0_04/bin/java
+08052000-08053000 rw-p 00009000 00:11 325324167  /data/1/java/jdk1.6.0_04/bin/java
+08053000-08061000 rwxp 00000000 00:00 0
+40000000-40015000 r-xp 00000000 68:03 228939     /lib/ld-2.3.2.so
+40015000-40016000 rw-p 00014000 68:03 228939     /lib/ld-2.3.2.so
+40016000-40017000 rw-p 00000000 00:00 0
+40017000-40018000 r--p 00000000 00:00 0
+40018000-40019000 rw-p 00000000 00:00 0
+40019000-4001f000 r-xp 00000000 00:11 325327398  /data/1/java/jdk1.6.0_04/jre/lib/i386/native_threads/libhpi.so
+4001f000-40020000 rw-p 00006000 00:11 325327398  /data/1/java/jdk1.6.0_04/jre/lib/i386/native_threads/libhpi.so
+40023000-4002d000 r-xp 00000000 68:03 3695567    /lib/tls/libpthread-0.29.so
+4002d000-4002e000 rw-p 0000a000 68:03 3695567    /lib/tls/libpthread-0.29.so
+4002e000-40030000 rw-p 00000000 00:00 0
+40030000-40037000 r-xp 00000000 00:11 325327396  /data/1/java/jdk1.6.0_04/jre/lib/i386/jli/libjli.so
+40037000-40039000 rw-p 00006000 00:11 325327396  /data/1/java/jdk1.6.0_04/jre/lib/i386/jli/libjli.so
+40039000-4003b000 r-xp 00000000 68:03 228950     /lib/libdl-2.3.2.so
+4003b000-4003c000 rw-p 00002000 68:03 228950     /lib/libdl-2.3.2.so
+4003c000-4003d000 rw-p 00000000 00:00 0
+4003d000-4005e000 r-xp 00000000 68:03 3695565    /lib/tls/libm-2.3.2.so
+4005e000-4005f000 rw-p 00020000 68:03 3695565    /lib/tls/libm-2.3.2.so
+4005f000-40062000 ---p 00003000 00:00 0
+40062000-400af000 rwxp 00006000 00:00 0
+400af000-400b7000 rw-s 00000000 68:03 2943623    /tmp/hsperfdata_taoxu/14238 (deleted)
+400bb000-400cd000 r-xp 00000000 68:03 228954     /lib/libnsl-2.3.2.so
+400cd000-400ce000 rw-p 00011000 68:03 228954     /lib/libnsl-2.3.2.so
+400ce000-400d0000 rw-p 00000000 00:00 0
+400d0000-400db000 r-xp 00000000 68:03 228960     /lib/libnss_files-2.3.2.so
+400db000-400dc000 rw-p 0000a000 68:03 228960     /lib/libnss_files-2.3.2.so
+400dc000-400e7000 r-xp 00000000 00:11 325327389  /data/1/java/jdk1.6.0_04/jre/lib/i386/libverify.so
+400e7000-400e8000 rw-p 0000b000 00:11 325327389  /data/1/java/jdk1.6.0_04/jre/lib/i386/libverify.so
+400e8000-4010b000 r-xp 00000000 00:11 325327367  /data/1/java/jdk1.6.0_04/jre/lib/i386/libjava.so
+4010b000-4010d000 rw-p 00023000 00:11 325327367  /data/1/java/jdk1.6.0_04/jre/lib/i386/libjava.so
+4010d000-4011c000 r-xp 00000000 00:11 325327390  /data/1/java/jdk1.6.0_04/jre/lib/i386/libzip.so
+4011c000-4011e000 rw-p 0000e000 00:11 325327390  /data/1/java/jdk1.6.0_04/jre/lib/i386/libzip.so
+4011e000-4019e000 rwxp 00001000 00:00 0
+42000000-4212e000 r-xp 00000000 68:03 3695563    /lib/tls/libc-2.3.2.so
+4212e000-42131000 rw-p 0012e000 68:03 3695563    /lib/tls/libc-2.3.2.so
+42131000-42133000 rw-p 00000000 00:00 0
+42133000-44133000 rwxp 00028000 00:00 0
+bfff6000-c0000000 rwxp ffff9000 00:00 0
+
+VM Arguments:
+jvm_args: -Xmx3600M 
+java_command: CopaSpectraRetriever
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/data/1/java/jdk
+PATH=.:/home/taoxu/bin:/data/1/java/jdk/bin:/data/1/root/bin:/data/1/root/perl:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/opt/env-switcher/bin:/opt/lam-7.0/bin:/opt/hdf5-oscar-1.6.0/bin/:/opt/kernel_picker/bin:/opt/pvm3/lib:/opt/pvm3/lib/LINUX:/opt/pvm3/bin/LINUX:/opt/c3-4/:/opt/pbs/bin:/opt/pbs/lib/xpbs/bin:.:/data/1/root/apps/blast:/data/1/java/ant/bin:/data/1/root/apps/omssa:/data/1/root/apps/byOnice-2006-6-6::/data/1/root/bin/AN:/data/1/root/perl/AN:/data/1/java/maven/bin
+LD_LIBRARY_PATH=/data/1/java/jdk1.6.0_04/jre/lib/i386/client:/data/1/java/jdk1.6.0_04/jre/lib/i386:/data/1/java/jdk1.6.0_04/jre/../lib/i386
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x3be340], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x3be340], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x30f440], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x30f440], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x30f440], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x30f440], sa_mask[0]=0xfffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x311480], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGINT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGQUIT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Red Hat Linux release 9 (Shrike)
+
+uname:Linux 2.4.20-8smp #1 SMP Thu Mar 13 17:45:54 EST 2003 i686
+libc:glibc 2.3.2 NPTL 0.29 
+rlimit: STACK 8192k, CORE 0k, NPROC 7168, NOFILE 1024, AS infinity
+load average:9.00 9.00 9.00
+
+CPU:total 2 (1 cores per cpu, 2 threads per core) family 15 model 2 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, ht
+
+Memory: 4k page, physical 2064480k(251112k free), swap 4096312k(4063660k free)
+
+vm_info: Java HotSpot(TM) Client VM (10.0-b19) for linux-x86 JRE (1.6.0_04-b12), built on Dec 14 2007 01:09:47 by "java_re" with gcc 3.2.1-7a (J2SE release)
+
+time: Tue Jul 16 03:35:19 2013
+elapsed time: 0 seconds
+
